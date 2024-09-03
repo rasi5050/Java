@@ -1,4 +1,9 @@
-dependencies to create jar
+## how to create jar + how to run it along with dependencies
+cd src/main/java/com/rasi/contactmanagerv3 
+
+
+
+in current project these are the dependencies to create jar
 /Users/rasi/.m2/repository/org/xerial/sqlite-jdbc/3.41.2.2/sqlite-jdbc-3.41.2.2.jar
 /Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar
 /Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar
@@ -24,7 +29,7 @@ sample commands: view
 java -cp .:ContactManager.jar:/Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/rasi/.m2/repository/org/xerial/sqlite-jdbc/3.41.2.2/sqlite-jdbc-3.41.2.2.jar:/Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar com.rasi.contactmanagerv3.Main view
 
 sample commands: insert
-java -cp .:ContactManager.jar:/Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/rasi/.m2/repository/org/xerial/sqlite-jdbc/3.41.2.2/sqlite-jdbc-3.41.2.2.jar:/Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar com.rasi.contactmanagerv3.Main insert "{\"name\":\"John Doe\",\"emails\":[{\"email_type\":\"personal\",\"email\":\"john@example.com\"}],\"phones\":[{\"phone_type\":\"mobile\",\"phone\":\"1234567890\"}],\"addresses\":[{\"address_type\":\"home\",\"address_line1\":\"123 Main St\",\"address_line2\":\"\",\"city\":\"New York\",\"state\":\"NY\",\"zip\":10001,\"country\":\"USA\"}]}"
+java -cp .:ContactManager.jar:/Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/rasi/.m2/repository/org/xerial/sqlite-jdbc/3.41.2.2/sqlite-jdbc-3.41.2.2.jar:/Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/rasi/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar com.rasi.contactmanagerv3.Main insert "{\"name\":\"Jannet Jackson\",\"emails\":[{\"email_type\":\"personal\",\"email\":\"john@example.com\"}],\"phones\":[{\"phone_type\":\"mobile\",\"phone\":\"1234567890\"}],\"addresses\":[{\"address_type\":\"home\",\"address_line1\":\"123 Main St\",\"address_line2\":\"\",\"city\":\"Manila\",\"state\":\"NY\",\"zip\":10999,\"country\":\"USA\"}]}"
 
 
 sample commands: update
