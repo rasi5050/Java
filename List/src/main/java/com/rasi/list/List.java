@@ -2,6 +2,8 @@ package com.rasi.list;
 
 import java.util.NoSuchElementException;
 
+import static java.lang.Math.max;
+
 /**
  * dynamic sized list; implemented using linked list from scratch; list grows towards head; (prev.tail.next) --> nodes --> (prev.head.next)
  * assumption: left is prev, next is right; list should be visualized as (prev.tail.next) --> nodes --> (prev.head.next)
@@ -14,8 +16,15 @@ public class List{
 
     private int size=0;
     public List() {
+
         head.setPrev(tail);
         tail.setNext(head);
+//        Node firstNode = new Node(4321, tail, null);
+//        Node secondNode = new Node(5432, firstNode, head);
+//        firstNode.setNext(secondNode);
+//
+//        head.setPrev(firstNode);
+//        tail.setNext(firstNode);
     }
 
 
@@ -24,7 +33,14 @@ public class List{
      * @param node  The new node to insert.
      */
     void _add(Node node) {
-        _add(size, node);
+//        _add(size, node);
+        Node headPrev = head.getPrev();
+        node.setPrev(headPrev);
+        node.setNext(head);
+        headPrev.setNext(node);
+        head.setPrev(node);
+        size++;
+
     }
 
     /**
@@ -35,6 +51,12 @@ public class List{
         if (index>size || index<0) {
             throw new IndexOutOfBoundsException();
         }
+
+        if (size == 0 || index == 0) {
+            return tail.getNext(); // Return the first node after the tail, which should be head in an empty list
+        }
+
+//        if (size==0) return head;
         int currIdx;
         Node currNode;
         if (index < size / 2) {
@@ -65,6 +87,18 @@ public class List{
     //I initially made the condition as index > size -1, gpt corrected me as it should be index > size to be able to insert to the end of list
         if (index < 0 || index>size) {
             throw new IndexOutOfBoundsException("Index " + index + " is out of bounds.");
+        }
+
+        // Handle adding the first element
+        if (size == 0 || index==size) {
+//            node.setPrev(tail);
+//            node.setNext(head);
+//            tail.setNext(node);
+//            head.setPrev(node);
+//            size++;
+//            return;
+            _add(node);
+            return;
         }
 
         Node currNode = iterateToIndex(index);
@@ -116,6 +150,7 @@ public class List{
     }
 
     int pop() {
+        if (size==0) throw new NoSuchElementException();
         Node currNode = iterateToIndex(size-1);
         _remove(currNode);
         return currNode.getVal(); // return last element
@@ -126,8 +161,10 @@ public class List{
     }
 
     void clear() {
-        head.setNext(tail);
-        tail.setPrev(head);
+//        head.setNext(tail);
+//        tail.setPrev(head);
+        tail.setNext(head);
+        head.setPrev(tail);
         size=0;
     }
 
@@ -137,8 +174,8 @@ public class List{
     boolean contains(int element) {
 //        +1 is added if the total length is odd, and middle item should be also checked
         int count = (size+1)/2;
-        Node start = head.getNext();
-        Node end = tail.getPrev();
+        Node start = tail.getNext();
+        Node end = head.getPrev();
         while (count>0) {
             if (start.getVal()==element || end.getVal()==element) {
                 return true;
@@ -162,8 +199,8 @@ public class List{
     int indexOf(int element) throws NoSuchElementException {
         int countStart = 0;
         int countEnd = size-1;
-        Node start = head.getNext();
-        Node end = tail.getPrev();
+        Node start = tail.getNext();
+        Node end = head.getPrev();
         while (countStart<=countEnd) {
 
             if (start.getVal()==element) {
@@ -188,6 +225,8 @@ public class List{
             sb.append(currNode.toString()).append(", ");
             currNode = currNode.getNext();
         }
+//        to remove the last ", "
+        if (size>0) sb.delete(sb.length() - 2, sb.length());
         sb.append("]");
         return sb.toString();
     }
