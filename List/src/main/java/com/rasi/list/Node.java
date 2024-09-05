@@ -1,40 +1,44 @@
 package com.rasi.list;
 
-public class Node {
-    private Integer val;
-    private Node prev;
-    private Node next;
-    public Node(Integer val, Node prev, Node next) {
-        this.val=val;
+/*
+* Represents a node in a doubly-linked list.
+* @param <T>: The type of value stored in the node
+ */
+public class Node<T> {
+    private T value;
+    private Node<T> prev;
+    private Node<T> next;
+    public Node(T value, Node<T> prev, Node<T> next) {
+        this.value=value;
         this.prev = prev;
         this.next=next;
     }
-    public Integer getVal() {
-        return val;
+    public T getValue() {
+        return value;
     }
 
-    public void setVal(Integer val) {
-        this.val = val;
+    public void setValue(T value) {
+        this.value = value;
     }
 
-    public Node getPrev() {
+    public Node<T> getPrev() {
         return prev;
     }
 
-    public void setPrev(Node prev) {
+    public void setPrev(Node<T> prev) {
         this.prev = prev;
     }
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 
     @Override
     public String toString() {
-        return val != null ? val.toString() : "null";
+        return value != null ? value.toString() : "null";
     }
 }
