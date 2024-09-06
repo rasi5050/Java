@@ -2,7 +2,7 @@ package com.rasi.list;
 public class Main {
     public static void main(String[] args) {
         System.out.println("hello world");
-        List list = new List();
+        List<Integer> list = new List<>();
         list.add(1);
 ////        error in input; some out of bound exception
         list.add(1);
@@ -12,6 +12,7 @@ public class Main {
         list.add(1);
         list.add(1);
         list.add(987978);
+//        list.add("hello");
         list.add(3454);
         list.add(1);
         list.add(1);
