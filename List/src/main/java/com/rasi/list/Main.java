@@ -4,30 +4,17 @@ public class Main {
         System.out.println("hello world");
         List<Integer> list = new List<>();
         list.add(1);
-////        error in input; some out of bound exception
         list.add(1);
-//        list.add(1);
         list.add(987978);
         list.add(3454);
         list.add(1);
         list.add(1);
         list.add(987978);
-//        list.add("hello");
         list.add(3454);
         list.add(1);
         list.add(1);
         list.add(987978);
-//        list.add(3454);
         list.pop();
-//        list.pop();
-//        list.add(1);
-//        list.add(1,66);
-//        list.add(0,66);
-//        list.add(4,66);
-//        list.add(4,66);
-
-
-
         list.pop();
         list.add(5,66);
         list.add(8,66);

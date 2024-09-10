@@ -485,6 +485,15 @@ System.out.println(num.apply(5)); // output will be 6
 <? super Number>      is lower bound, ? should atleast Number or anything above
 ````
 
+If a list has to take any type of input, its type should be declare most general types, that is Object
+
+List<Object> list = new List<>();
+list.add("this is a string")
+list.add(1)
+
+is valid
+
+
 # Optional
 
 efficient way to handle possible null values to avoid NullPointerException
