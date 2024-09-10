@@ -528,6 +528,8 @@ def iterFunction(anotherFn):
 
 basically all these mess is because Java has to create a type of whatever it has to do
 
-## if Python and Haskell is both statically typed why doesnt Haskell has better type inference and Java doesnt
+# 9/6/24
 
-although both are statically typed Haskell is stronger type Inference. Java on the other hand has weeaker type inference, also contrained by Object oriented complexities and Backward compactability. (refer: "gpt conversations/9_6_24 var type and why cant it infer complex types.md")
+## if Python and Haskell is both statically typed why doesnt Haskell has better type inference and Java doesnt (refer: "gpt conversations/9_6_24 var type and why cant it infer complex types.md")
+
+although both are statically typed Haskell is stronger type Inference. Java on the other hand has weeaker type inference, also contrained by Object oriented complexities and Backward compactability. 
