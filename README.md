@@ -17,3 +17,7 @@ input from command line
 ## 9/10/2024 - Java/StackUsingList/
 
 <img width="1800" alt="Screenshot 2024-09-10 at 14 55 32" src="https://github.com/user-attachments/assets/bc2a61f4-40fd-4bcc-bf85-34e5c89c84a5">
+
+## 9/14/2024 - Java/QueueUsingList/
+
+![](./images/QueueScreenshot.png)

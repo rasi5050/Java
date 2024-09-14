@@ -1,4 +1,4 @@
-package com.rasi.stackusinglist;
+package com.rasi.queueusinglist;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.rasi.stackusinglist;
+package com.rasi.queueusinglist;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +18,6 @@ public class Main {
         System.out.println(queue.peek());
 
         System.out.println(queue.size());
-
 
         System.out.println(queue);
 
