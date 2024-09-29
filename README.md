@@ -1,3 +1,5 @@
+Note: updating github key git remote set-url origin https://rasi5050:<key>@github.com/rasi5050/Java.git
+
 ## 8/25/2024 - Java/ContactManagerV2/
 
 input from IO
@@ -21,3 +23,7 @@ input from command line
 ## 9/14/2024 - Java/QueueUsingList/
 
 ![](./images/QueueScreenshot.png)
+
+## 9/28/2024 - Java/BinaryTree/
+
+![](./images/BinaryTreeOutputScreenshot.png)
